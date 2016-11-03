@@ -76,26 +76,18 @@
 		</div>
 	</nav>
 
-
-
-
-
-	<form class="form-horizontal marca">
+	<form class="form-horizontal marca" action="marca/save" method="post">
+		<input type="hidden" name="id"/>
 		<fieldset>
 			<legend>Marca</legend>
 			<p>
 				<label class="control-label" for="marca">Marca</label> 
-				<input class="form-control input-sm" type="text" id="marca" size="40" />
+				<input class="form-control input-sm" type="text" id="marca" size="40" name="marca" />
 			</p>
-			
-		
-			  <div class="col-lg-10 col-lg-offset-4">
+			<div class="col-lg-10 col-lg-offset-4">
 				<button type="reset" class="btn btn-default">Cancel</button>
 				<button type="submit" class="btn btn-primary">Cadastrar</button>
-			  </div>
-		
-
-
+			</div>
 
 		</fieldset>
 	</form>

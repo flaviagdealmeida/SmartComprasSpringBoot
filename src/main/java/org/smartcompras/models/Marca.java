@@ -1,23 +1,45 @@
 package org.smartcompras.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Marca {
 
-	private int idMarca;
+	@Id
+	private String id;
+	
 	private String marca;
-	
-	
-	public int getIdMarca() {
-		return idMarca;
+
+	public Marca() {
+		super();
 	}
-	public void setIdMarca(int idMarca) {
-		this.idMarca = idMarca;
+
+	public Marca(String id, String marca) {
+		super();
+		this.id = id;
+		this.marca = marca;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	public String getMarca() {
 		return marca;
 	}
+
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Marca [id=" + id + ", marca=" + marca + "]";
+	}
+
 }
